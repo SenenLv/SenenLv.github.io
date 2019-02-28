@@ -14,25 +14,25 @@
     
     
     
-    <title>myblog | SenenLv&#39;Blog | 偶尔回头望望</title>
+    <title>STM32 由 identfier “TIM7_IRQn”is undefined  引起的查找 | SenenLv&#39;Blog | 偶尔回头望望</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="test">
-    <meta name="description" content="hello world!!!  one123  twothreefoursix">
-<meta name="keywords" content="test">
+    <meta name="keywords" content="STM32">
+    <meta name="description" content="第一次尝试（以失败告终）首先直接百度错误（identfier “TIM7_IRQn”is undefined）以为找到了答案，是启动文件starup_stm32f10x_md.s中并没有TIM7中断响应功能，解决办法是直接将启动文件starup_stm32f10x_md.s改为starup_stm32f10x_hd.s，因为starup_stm32f10x_hd.s中有TIM7的中断响应，结果以失">
+<meta name="keywords" content="STM32">
 <meta property="og:type" content="article">
-<meta property="og:title" content="myblog">
-<meta property="og:url" content="http://SenenLv.github,io/2019/02/24/myblog/index.html">
+<meta property="og:title" content="STM32 由 identfier “TIM7_IRQn”is undefined  引起的查找">
+<meta property="og:url" content="http://SenenLv.github,io/2019/02/24/stm32 TIM7没有定义报错/index.html">
 <meta property="og:site_name" content="SenenLv&#39;Blog">
-<meta property="og:description" content="hello world!!!  one123  twothreefoursix">
+<meta property="og:description" content="第一次尝试（以失败告终）首先直接百度错误（identfier “TIM7_IRQn”is undefined）以为找到了答案，是启动文件starup_stm32f10x_md.s中并没有TIM7中断响应功能，解决办法是直接将启动文件starup_stm32f10x_md.s改为starup_stm32f10x_hd.s，因为starup_stm32f10x_hd.s中有TIM7的中断响应，结果以失">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-25T13:55:32.622Z">
+<meta property="og:updated_time" content="2019-02-28T13:06:57.721Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="myblog">
-<meta name="twitter:description" content="hello world!!!  one123  twothreefoursix">
+<meta name="twitter:title" content="STM32 由 identfier “TIM7_IRQn”is undefined  引起的查找">
+<meta name="twitter:description" content="第一次尝试（以失败告终）首先直接百度错误（identfier “TIM7_IRQn”is undefined）以为找到了答案，是启动文件starup_stm32f10x_md.s中并没有TIM7中断响应功能，解决办法是直接将启动文件starup_stm32f10x_md.s改为starup_stm32f10x_hd.s，因为starup_stm32f10x_hd.s中有TIM7的中断响应，结果以失">
     
         <link rel="alternate" type="application/atom+xml" title="SenenLv&#39;Blog" href="/atom.xml">
     
@@ -120,7 +120,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">myblog</div>
+        <div class="flex-col header-title ellipsis">STM32 由 identfier “TIM7_IRQn”is undefined  引起的查找</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -142,7 +142,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">myblog</h1>
+        <h1 class="title">STM32 由 identfier “TIM7_IRQn”is undefined  引起的查找</h1>
         <h5 class="subtitle">
             
                 <time datetime="2019-02-24T08:18:16.000Z" itemprop="datePublished" class="page-time">
@@ -150,7 +150,7 @@
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/123/">123</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/经验/">经验</a></li></ul>
 
             
         </h5>
@@ -167,20 +167,20 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hello-world-one"><span class="post-toc-number">1.</span> <span class="post-toc-text">hello world!!!  one</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#123-two"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">123  two</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#three"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">three</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#four"><span class="post-toc-number">1.1.1.1.</span> <span class="post-toc-text">four</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#six"><span class="post-toc-number">1.1.1.1.1.</span> <span class="post-toc-text">six</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第一次尝试（以失败告终）"><span class="post-toc-number">1.</span> <span class="post-toc-text">第一次尝试（以失败告终）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第二次尝试（我又输了）"><span class="post-toc-number">2.</span> <span class="post-toc-text">第二次尝试（我又输了）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三次（我解决了）"><span class="post-toc-number">3.</span> <span class="post-toc-text">第三次（我解决了）</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-myblog" class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-stm32 TIM7没有定义报错" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">myblog</h1>
+        <h1 class="post-card-title">STM32 由 identfier “TIM7_IRQn”is undefined  引起的查找</h1>
         <div class="post-meta">
             <time class="post-time" title="2019-02-24 16:18:16" datetime="2019-02-24T08:18:16.000Z" itemprop="datePublished">2019-02-24</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/123/">123</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/经验/">经验</a></li></ul>
 
 
 
@@ -192,7 +192,10 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="hello-world-one"><a href="#hello-world-one" class="headerlink" title="hello world!!!  one"></a>hello world!!!  one</h1><h2 id="123-two"><a href="#123-two" class="headerlink" title="123  two"></a>123  two</h2><h3 id="three"><a href="#three" class="headerlink" title="three"></a>three</h3><h4 id="four"><a href="#four" class="headerlink" title="four"></a>four</h4><h5 id="six"><a href="#six" class="headerlink" title="six"></a>six</h5>
+            <h2 id="第一次尝试（以失败告终）"><a href="#第一次尝试（以失败告终）" class="headerlink" title="第一次尝试（以失败告终）"></a>第一次尝试（以失败告终）</h2><p>首先直接百度错误（identfier “TIM7_IRQn”is undefined）以为找到了答案，是启动文件starup_stm32f10x_md.s中并没有TIM7中断响应功能，<br>解决办法是直接将启动文件starup_stm32f10x_md.s改为starup_stm32f10x_hd.s，因为starup_stm32f10x_hd.s中有TIM7的中断响应，结果以失败告终，出现更多的错误。  </p>
+<h2 id="第二次尝试（我又输了）"><a href="#第二次尝试（我又输了）" class="headerlink" title="第二次尝试（我又输了）"></a>第二次尝试（我又输了）</h2><p>以为是跟芯片选型有关，刚开始选择的是STM32f103RC，后来更改为STM32f103ZE后依然出错，很是无奈啊！！！报错stm32f10x.h(298): error: #67: expected a “}”</p>
+<h2 id="第三次（我解决了）"><a href="#第三次（我解决了）" class="headerlink" title="第三次（我解决了）"></a>第三次（我解决了）</h2><p><a href="https://blog.csdn.net/BiuBiu741/article/details/72856465" target="_blank" rel="noopener">救星</a>来拯救我了。<br>在keil中选择芯片后，在Options-&gt;c/c++中的Define中需要填写相应定义，芯片类型为STM32f103RC时对应填STM32F10X_MD,USE_STDPERIPH_DRIVER；芯片类型为STM32f103ZE时对应填STM32F10X_HD，USE_STDPERIPH_DRIVER。</p>
+
         </div>
 
         <blockquote class="post-copyright">
@@ -200,12 +203,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-02-25T13:55:32.622Z" itemprop="dateUpdated">2019-02-25 21:55:32</time>
+    最后更新时间：<time datetime="2019-02-28T13:06:57.721Z" itemprop="dateUpdated">2019-02-28 21:06:57</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2019/02/24/myblog/" target="_blank" rel="external">http://SenenLv.github,io/2019/02/24/myblog/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2019/02/24/stm32 TIM7没有定义报错/" target="_blank" rel="external">http://SenenLv.github,io/2019/02/24/stm32 TIM7没有定义报错/</a>
         
     </div>
     
@@ -226,7 +229,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/">test</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/STM32/">STM32</a></li></ul>
 
 
             
@@ -236,7 +239,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://SenenLv.github,io/2019/02/24/myblog/&title=《myblog》 — SenenLv'Blog&pic=http://SenenLv.github,io/img/123.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://SenenLv.github,io/2019/02/24/stm32 TIM7没有定义报错/&title=《STM32 由 identfier “TIM7_IRQn”is undefined  引起的查找》 — SenenLv'Blog&pic=http://SenenLv.github,io/img/123.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -246,22 +249,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://SenenLv.github,io/2019/02/24/myblog/&title=《myblog》 — SenenLv'Blog&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://SenenLv.github,io/2019/02/24/stm32 TIM7没有定义报错/&title=《STM32 由 identfier “TIM7_IRQn”is undefined  引起的查找》 — SenenLv'Blog&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://SenenLv.github,io/2019/02/24/myblog/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://SenenLv.github,io/2019/02/24/stm32 TIM7没有定义报错/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《myblog》 — SenenLv'Blog&url=http://SenenLv.github,io/2019/02/24/myblog/&via=http://SenenLv.github,io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《STM32 由 identfier “TIM7_IRQn”is undefined  引起的查找》 — SenenLv'Blog&url=http://SenenLv.github,io/2019/02/24/stm32 TIM7没有定义报错/&via=http://SenenLv.github,io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://SenenLv.github,io/2019/02/24/myblog/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://SenenLv.github,io/2019/02/24/stm32 TIM7没有定义报错/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -281,16 +284,16 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
   
-
-  
-    <div class="waves-block waves-effect next">
-      <a href="/2019/02/24/hello-world/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/02/24/hello-world/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
         <h4 class="title">Hello World</h4>
       </a>
     </div>
+  
+
   
 </nav>
 
@@ -387,7 +390,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://SenenLv.github,io/2019/02/24/myblog/&title=《myblog》 — SenenLv'Blog&pic=http://SenenLv.github,io/img/123.png" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://SenenLv.github,io/2019/02/24/stm32 TIM7没有定义报错/&title=《STM32 由 identfier “TIM7_IRQn”is undefined  引起的查找》 — SenenLv'Blog&pic=http://SenenLv.github,io/img/123.png" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -397,22 +400,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://SenenLv.github,io/2019/02/24/myblog/&title=《myblog》 — SenenLv'Blog&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://SenenLv.github,io/2019/02/24/stm32 TIM7没有定义报错/&title=《STM32 由 identfier “TIM7_IRQn”is undefined  引起的查找》 — SenenLv'Blog&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://SenenLv.github,io/2019/02/24/myblog/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://SenenLv.github,io/2019/02/24/stm32 TIM7没有定义报错/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《myblog》 — SenenLv'Blog&url=http://SenenLv.github,io/2019/02/24/myblog/&via=http://SenenLv.github,io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《STM32 由 identfier “TIM7_IRQn”is undefined  引起的查找》 — SenenLv'Blog&url=http://SenenLv.github,io/2019/02/24/stm32 TIM7没有定义报错/&via=http://SenenLv.github,io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://SenenLv.github,io/2019/02/24/myblog/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://SenenLv.github,io/2019/02/24/stm32 TIM7没有定义报错/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -423,7 +426,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://SenenLv.github,io/2019/02/24/myblog/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://SenenLv.github,io/2019/02/24/stm32 TIM7没有定义报错/" alt="微信分享二维码">
 </div>
 
 
