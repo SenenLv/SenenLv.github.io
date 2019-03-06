@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="SenenLv&#39;Blog">
 <meta property="og:description" content="1.初赛（2019年） 3-8 到 3-29   正式报名 3-15 到 3-29  初赛训练   3-30     初赛截至（正式比赛每天只有5次提交机会）  2.赛事经验（往年） 相同的开发环境 代码编写上尽量考虑数据量    如数组越界等等问题 代码版本控制 数据的预处理   噪声处理（3σ原则、箱型图） 更新异常值     加权平均法   一次指数平滑或移动平均法  3.编译测试环境及代码">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-06T14:16:42.427Z">
+<meta property="og:updated_time" content="2019-03-06T14:53:55.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="华为软件赛事流程与经验">
 <meta name="twitter:description" content="1.初赛（2019年） 3-8 到 3-29   正式报名 3-15 到 3-29  初赛训练   3-30     初赛截至（正式比赛每天只有5次提交机会）  2.赛事经验（往年） 相同的开发环境 代码编写上尽量考虑数据量    如数组越界等等问题 代码版本控制 数据的预处理   噪声处理（3σ原则、箱型图） 更新异常值     加权平均法   一次指数平滑或移动平均法  3.编译测试环境及代码">
@@ -206,11 +206,30 @@
 </ol>
 <h2 id="3-编译测试环境及代码提交"><a href="#3-编译测试环境及代码提交" class="headerlink" title="3.编译测试环境及代码提交"></a>3.编译测试环境及代码提交</h2><ol>
 <li><p>根据参赛选手选定的开发语言，官方会提供一个SDK，其中SDK中包含的东西：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">  SDK-gcc.zip/</span><br><span class="line">    ├── bin/                         可执行二进制文件目录，shell脚本在编译前删除此目录并重新创建此目录，故没有此目录不会影响脚本运行</span><br><span class="line">    ├── build/                       构建目录，shell脚本在编译前删除此目录并重新创建此目录，故没有此目录不会影响脚本运行</span><br><span class="line">    ├── ecs/                         代码目录</span><br><span class="line">    │     ├── lib/                   lib头文件目录，此文件夹不可修改亦不可在其下新增文件</span><br><span class="line">    │     │     ├── lib_io.h         读写文件的头文件，不可修改</span><br><span class="line">    │     │     └── lib_time.h       打印时间的头文件，不可修改</span><br><span class="line">    │     ├── CMakeLists.txt         cmake，不可修改</span><br><span class="line">    │     ├── ecs.cpp                main函数源文件，不可修改</span><br><span class="line">    │     ├── io.cpp                 提供读写文件等功能的源文件，不可修改</span><br><span class="line">    │     ├── predict.cpp             你要写代码的源文件</span><br><span class="line">    │     └── predict.h               你要写代码的头文件</span><br><span class="line">    ├── build.sh                     编译、链接、打包批处理脚本，不可修改</span><br><span class="line">    └── readme.txt                   你正在看的文件 -_-&quot; 这不用介绍了吧</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">2. 按照以上的写好代码，这时需要一个编译的环境，其中华为官方说明的编译环境例如</span><br><span class="line">*  CPU：Intel（R）Xeon(R)CPU E5-2680 V4 @2.40GHz   </span><br><span class="line">*  内存：2G   </span><br><span class="line">*  CPU核数：单核  </span><br><span class="line">*  编译器：gcc 4.8.4 、java 1.8、python 2.7  </span><br><span class="line">*  操作系统：ubuntu 14.04.4 LTS 64位  </span><br><span class="line">*  内核版本：Linux version 4.4.0-31-generc</span><br><span class="line">这编译环境是华为云上的编译环境，代码提交后需要在此环境编译，编译没有错误就会评分。</span><br><span class="line">3. 根据官方编译环境的说明，在本地可以建立虚拟机，在虚拟机中配置相同的编译环境，在本地编译、连接、打包。在SDK中包含有build.sh脚本文件，可以使用一键脚本build.sh编译、连接并打包。编译成功会在bin目录下生成可执行二进制文件ecs。在执行build.sh后，需要注意的地方：</span><br><span class="line">* shell脚本会删除bin/和build/目录，以及这两个目录下的所有文件和目录。请不要在此保存你的任何文档；</span><br><span class="line">* 如果想使用shell脚本一键功能，请保持SDK-gcc/目录下所有内容的完整，请不要修改任何目录名和文件名，并保持各目录和文件的位置关系不变。</span><br><span class="line">4. 上传答案的目录格式</span><br></pre></td></tr></table></figure>
-<p>ecs.tar.gz/ (文件格式可以为tar.gz或者zip格式，文件名称可以自定义，但不要包含中文或空格)<br> ├── bin/<br> ├── build/<br> ├── ecs/<br> ├── build.sh    不可修改或删除<br> └── readme.txt  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">SDK-gcc.zip/</span><br><span class="line">  ├── bin/                         可执行二进制文件目录，shell脚本在编译前删除此目录并重新创建此目录，故没有此目录不会影响脚本运行</span><br><span class="line">  ├── build/                       构建目录，shell脚本在编译前删除此目录并重新创建此目录，故没有此目录不会影响脚本运行</span><br><span class="line">  ├── ecs/                         代码目录</span><br><span class="line">  │     ├── lib/                   lib头文件目录，此文件夹不可修改亦不可在其下新增文件</span><br><span class="line">  │     │     ├── lib_io.h         读写文件的头文件，不可修改</span><br><span class="line">  │     │     └── lib_time.h       打印时间的头文件，不可修改</span><br><span class="line">  │     ├── CMakeLists.txt         cmake，不可修改</span><br><span class="line">  │     ├── ecs.cpp                main函数源文件，不可修改</span><br><span class="line">  │     ├── io.cpp                 提供读写文件等功能的源文件，不可修改</span><br><span class="line">  │     ├── predict.cpp             你要写代码的源文件</span><br><span class="line">  │     └── predict.h               你要写代码的头文件</span><br><span class="line">  ├── build.sh                     编译、链接、打包批处理脚本，不可修改</span><br><span class="line">  └── readme.txt                   你正在看的文件 -_-&quot; 这不用介绍了吧</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按照以上的写好代码，这时需要一个编译的环境，其中华为官方说明的编译环境例如</p>
 </li>
 </ol>
-<p><code>`</code></p>
+<ul>
+<li>CPU：Intel（R）Xeon(R)CPU E5-2680 V4 @2.40GHz   </li>
+<li>内存：2G   </li>
+<li>CPU核数：单核  </li>
+<li>编译器：gcc 4.8.4 、java 1.8、python 2.7  </li>
+<li>操作系统：ubuntu 14.04.4 LTS 64位  </li>
+<li>内核版本：Linux version 4.4.0-31-generc<br>这编译环境是华为云上的编译环境，代码提交后需要在此环境编译，编译没有错误就会评分。</li>
+</ul>
+<ol start="3">
+<li>根据官方编译环境的说明，在本地可以建立虚拟机，在虚拟机中配置相同的编译环境，在本地编译、连接、打包。在SDK中包含有build.sh脚本文件，可以使用一键脚本build.sh编译、连接并打包。编译成功会在bin目录下生成可执行二进制文件ecs。在执行build.sh后，需要注意的地方：</li>
+</ol>
+<ul>
+<li>shell脚本会删除bin/和build/目录，以及这两个目录下的所有文件和目录。请不要在此保存你的任何文档；</li>
+<li>如果想使用shell脚本一键功能，请保持SDK-gcc/目录下所有内容的完整，请不要修改任何目录名和文件名，并保持各目录和文件的位置关系不变。</li>
+</ul>
+<ol start="4">
+<li>上传答案的目录格式</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ecs.tar.gz/ (文件格式可以为tar.gz或者zip格式，文件名称可以自定义，但不要包含中文或空格)</span><br><span class="line">   ├── bin/ </span><br><span class="line">   ├── build/ </span><br><span class="line">   ├── ecs/  </span><br><span class="line">   ├── build.sh	不可修改或删除</span><br><span class="line">   └── readme.txt</span><br></pre></td></tr></table></figure>
 <ol start="5">
 <li>关于本地环境测试</li>
 </ol>
@@ -229,7 +248,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-03-06T14:16:42.427Z" itemprop="dateUpdated">2019-03-06 22:16:42</time>
+    最后更新时间：<time datetime="2019-03-06T14:53:55.772Z" itemprop="dateUpdated">2019-03-06 22:53:55</time>
 </span><br>
 
 
@@ -317,7 +336,7 @@
     <div class="waves-block waves-effect next">
       <a href="/2019/03/01/c语言编程规范/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Hello World</h4>
+        <h4 class="title">C语言编程规范</h4>
       </a>
     </div>
   
